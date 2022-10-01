@@ -3,50 +3,57 @@ import instaLogo from './InstagramLogo.png';
 import tiktokLogo from './TikTokLogo.png';
 import etsytLogo from './EtsyLogo.png';
 import './App.css';
+import { Button, Container, Section } from './globalStyles';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Your favorite premium nature stickers!
+          Nature is blissfulness!
         </p>
-		<div>
-			<div className="SocialMedia">
-				<img src={etsytLogo} className="SocialMedia-logo" alt="etsytLogo" />
+		<Section>
+			<Container>
 				<a
-				  className="App-link"
-				  href="https://www.etsy.com/shop/KindGardenist?ref=profile_header"
-				  target="_blank"
-				  rel="noopener noreferrer"
+					className="Social-link"
+					href="https://www.etsy.com/shop/KindGardenist?ref=profile_header"
 				>
-				Etsy
+					<Button>
+						<img src={etsytLogo} className="SocialMedia-logo" alt="etsytLogo" />
+						<div className="Social-text">
+							Etsy
+						</div>
+					</Button>
 				</a>
-			</div>
-			<div className="SocialMedia">
-				<img src={instaLogo} className="SocialMedia-logo" alt="instaLogo" />
+			</Container>
+			<Container>
 				<a
-				  className="App-link"
-				  href="https://www.instagram.com/kindgardenist/"
-				  target="_blank"
-				  rel="noopener noreferrer"
+						className="Social-link"
+						href="https://www.instagram.com/kindgardenist/"
 				>
-				  Instagram
+					<Button>
+					    <img src={instaLogo} className="SocialMedia-logo" alt="instaLogo" />
+						<div className="Social-text">
+                          Instagram
+						</div>
+					</Button>
 				</a>
-			</div>
-			<div className="SocialMedia">
-				<img src={tiktokLogo} className="SocialMedia-logo" alt="tiktokLogo" />
+			</Container>
+			<Container>
 				<a
-				  className="App-link"
-				  href="https://www.tiktok.com/@kindgardenist?lang=en"
-				  target="_blank"
-				  rel="noopener noreferrer"
+						className="Social-link"
+						href="https://www.instagram.com/kindgardenist/"
 				>
-				  TikTok
+					<Button>
+						<img src={tiktokLogo} className="SocialMedia-logo" alt="tiktokLogo" />
+						<div className="Social-text">
+							TikTok
+						</div>
+					</Button>
 				</a>
-			</div>
-		</div>
+			</Container>
+		</Section>
       </header>
     </div>
   );

@@ -1,13 +1,10 @@
-.App {
-  text-align: center;
-}
 
 .App-logo {
   height: 20vmin;
   pointer-events: none;
 }
 .SocialMedia-logo {
-  height: 5vmin;
+  height: 1.25em;
   pointer-events: none;
 }
 
@@ -22,12 +19,13 @@
   color: white;
 }
 
-.App-link {
-  color: #4c956c;
-}
-
-.SocialMedia {
+.Social-link{
+  text-decoration: none;
   align-items:center;
-  display:flex;
 }
 
+.Social-text{
+  margin: 0em 1em;
+  padding: 0em;
+  width: 5em;
+}
