@@ -38,7 +38,7 @@ const HeaderButton = styled.button`
     border-style: solid;
     border-width: 0px;
     border-radius: 50px;
-    box-shadow: 5px 5px 10px -3px;
+    box-shadow: 5px 5px 10px -3px #000;
     display: flex;
     align-items: center;
     justify-content: left;
