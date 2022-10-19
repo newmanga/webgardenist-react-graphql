@@ -17,7 +17,6 @@ export const Container = styled.div`
   padding: 0;
 `;
 
-
 export const Button = styled.button`
   align-items:center;
   justify-content: left;
@@ -28,7 +27,7 @@ export const Button = styled.button`
   color: #f6e7cb;
   margin: 1em 0em;
   padding: 0.1em 1em;
-  font-size: calc(20px + 2vmin);
+  font-size: 2rem;
   width: 100%;
   &:hover {
     background-color: #6a997f;

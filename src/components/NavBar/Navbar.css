@@ -1,0 +1,145 @@
+.NavbarItems {
+    background: #f6e7cb;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-image: url("../../Images/headerImage.PNG");
+    background-size: cover;
+}
+
+.navbar-logo {
+    grid-column-start: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    height: 3em;
+}
+
+.nav-menu {
+    grid-column-start: 3;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+    list-style: none;
+    text-align: center;
+    justify-content: end;
+    margin-right: 1rem;
+}
+
+.nav-links {
+    color: #dda15e;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+    background-color: #a6c48a;
+    border-radius: 4px;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.fa-bars {
+    color: #dda15e;
+}
+
+.fa-times {
+    color: #614524;
+}
+
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .NavbarItems {
+        grid-template-rows: 10% 90%;
+    }
+
+    .nav-menu {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        align-self: start;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 0;
+        z-index: 1;
+        transition: height 1s ease-out;
+    }
+
+    .nav-menu.active {
+        background: #a6c48a;
+        justify-content: center;
+        visibility: visible;
+        height: 400px;
+    }
+    
+    .navbar-logo {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    .navbar-logo.active {
+        display: none;
+    }
+
+    .menu-icon {
+        grid-row-start: 1;
+        grid-column-start: 3;
+        
+        margin-top: 2rem;
+        margin-right: 2rem;
+        display: flex;
+        justify-self: flex-end;
+        font-size: 1.8rem;
+        z-index: 2;
+    }
+
+    .nav-links {
+        text-align: center;
+        color: #000;
+        padding: 1rem 100px;
+        font-size: 1.3rem;
+        perspective: 100px;
+    }
+
+    .nav-links:hover {
+        background-color: #f6e7cb;
+        border-radius: 4px;
+    }
+
+    .nav-menu li{
+        visibility: hidden;
+        transition: padding 0.75s ease-in;
+    }
+
+    .nav-menu.active li{
+        visibility: visible;
+        padding: 1rem 0rem;
+    }
+}
+
+
+/*
+
+    .menu-icon {
+        grid-row-start: 1;
+        grid-column-start: 3;
+        justify-self: end;
+        margin-right: 1rem;
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        position:absolute;
+        z-index: 2;
+    }
+*/

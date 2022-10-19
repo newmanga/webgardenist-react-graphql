@@ -1,0 +1,76 @@
+
+.test {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.Header-Img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.Link {
+    margin: 1rem 0;
+    width: 100%;
+
+}
+
+.Link a{
+    text-decoration: none;
+    width: 100%;
+}
+
+.Logo {
+    height: 15rem;
+    z-index: 1;
+}
+
+.Slogan {
+    z-index: 1;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.Slogan h1{
+    z-index: 1;
+    color: #dd9787; 
+    text-align: center;
+    font-family: bistro-script-web,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+
+.LinkBtnImg {
+    height: 3.5rem;
+
+}
+
+.LinkBtnTitle {
+    width: 100%;
+    font-size: 2.5rem;
+    padding-right: 1rem;
+    color: #f6e7cb;
+    
+}
+
+@media screen and (max-width: 960px) {
+    .Header-Img{
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    .Logo {
+        height: 6rem;
+    }
+
+    .Slogan {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+}
