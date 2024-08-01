@@ -1,20 +1,10 @@
 import React, {Component} from "react";
 import {LinkList} from "./LinkList"
 import './HomeLinkTree.css'
-import headerImage from "../../Images/HeaderImageBig.jpg";
-import headerImageMobile from "../../Images/HeaderImageBigMobile.jpg";
 import styled, {css} from "styled-components/macro";
 import mainLogo from './../../kingGardenistLogo.png';
 
-
-const HeaderSection = styled.section`
-    position: relative;
-    background-image: url(${headerImage});
-    background-size: contain;
-    background-repeat: repeat;
-    background-position: top;
-    margin-top: 130px;
-`;
+import {HeaderSection} from '../Common/Header';
 
 const HeaderWrapper = styled.div`
     width: 100%;
