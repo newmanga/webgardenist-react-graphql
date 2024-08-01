@@ -13,13 +13,13 @@
     object-fit: cover;
 }
 
-.Link {
+.MediaLink {
     margin: 1rem 0;
     width: 100%;
 
 }
 
-.Link a{
+.MediaLink a{
     text-decoration: none;
     width: 100%;
 }
@@ -27,6 +27,7 @@
 .Logo {
     height: 15rem;
     z-index: 1;
+    margin-top: 150px;
 }
 
 .Slogan {

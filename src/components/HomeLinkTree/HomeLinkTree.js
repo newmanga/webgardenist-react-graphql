@@ -8,10 +8,12 @@ import mainLogo from './../../kingGardenistLogo.png';
 
 
 const HeaderSection = styled.section`
-    height: 100vh;
-
     position: relative;
-    overflow: hidden;
+    background-image: url(${headerImage});
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: top;
+    margin-top: 130px;
 `;
 
 const HeaderWrapper = styled.div`
@@ -31,6 +33,7 @@ const ButtonsWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: left;
+    margin-bottom: 50px;
 `;
 
 const HeaderButton = styled.button`
@@ -67,9 +70,6 @@ class HomeLinkTree extends Component {
         return(
             <HeaderSection>
                 <HeaderWrapper>
-                    {this.state.matches && (<img className="Header-Img" src={headerImageMobile}></img>)}
-                    {!this.state.matches && (<img className="Header-Img" src={headerImage}></img>)}
-                    
                     <ButtonsWrapper>
                         <img src={mainLogo} className="Logo"/>
                         <div className="Slogan">
@@ -78,7 +78,7 @@ class HomeLinkTree extends Component {
                         </div>
                         {LinkList.map((item,index)=> {
                             return (
-                                <div className="Link">
+                                <div className="MediaLink">
                                     <a href={item.url}>
                                         <HeaderButton>
                                             <img className="LinkBtnImg" src={item.imgSrc} />
@@ -94,8 +94,6 @@ class HomeLinkTree extends Component {
                     </ButtonsWrapper>
                 </HeaderWrapper>
             </HeaderSection>
-            
-
         )
     }
 }

@@ -1,22 +1,29 @@
+import ContactPage from '../Contact/Contact';
+import HomeLinkTree from '../HomeLinkTree/HomeLinkTree';
+
 export const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        path: '/',
+        element: <HomeLinkTree/>,
         cName: 'nav-links'
     },
     {
         title: 'Services',
-        url: '#',
+        path: '/',
+        element: <HomeLinkTree/>,
         cName: 'nav-links'
     },
     {
         title: 'Products',
-        url: '#',
+        path: '/',
+        element: <HomeLinkTree/>,
         cName: 'nav-links'
     },
     {
         title: 'Contact Us',
-        url: '#',
+        path: '/contact',
+        element: <ContactPage/>,
         cName: 'nav-links'
     }
 ]

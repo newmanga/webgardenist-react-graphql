@@ -1,13 +1,16 @@
 .NavbarItems {
     background: #f6e7cb;
-    height: 200px;
+    height: 130px;
     display: grid;
     grid-template-columns: 25% 50% 25%;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    background-image: url("../../Images/headerImage.PNG");
-    background-size: cover;
+    position: fixed;  
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .navbar-logo {
@@ -19,13 +22,10 @@
 }
 
 .nav-menu {
-    grid-column-start: 3;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 20px;
     list-style: none;
     text-align: center;
-    justify-content: end;
     margin-right: 1rem;
 }
 
