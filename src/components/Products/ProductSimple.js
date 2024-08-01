@@ -28,9 +28,8 @@ const PopupWrapper = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 9999;
-
-  visibility: ${(props) => (props.isPopupOpen ? 'visible' : 'hidden')};
-  opacity: ${(props) => (props.isPopupOpen ? 1 : 0)};
+    visibility: hidden;
+    opacity: 0;
 `;
 
 const PopupContent = styled.div`
@@ -41,22 +40,9 @@ const PopupContent = styled.div`
 
     /* Optional styling for popup content (consider customizing further): */
     max-width: 800px; /* Limit maximum width for responsiveness */
-    max-height: 80%; /* Limit maximum height for overflow prevention */
+    max-height: 95%; /* Limit maximum height for overflow prevention */
     overflow-y: auto; /* Enable scrolling if content overflows */
-`;
-
-const CloseButton = styled.button`
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; /* Add cursor for visual feedback */
-
-    /* Optional styling for close button (consider customizing further): */
-    background-color: #ddd;
-    color: #333;
+    margin: 10px;
 `;
 
 class ProductSimple extends Component {
@@ -101,12 +87,12 @@ class ProductSimple extends Component {
             {isPopupOpen && (
               <PopupWrapper style={{ visibility: "visible", opacity: 1 }}>
                 <PopupContent>
-                  <img src={selectedImage.src} alt={selectedImage.title} style={{ width: "100%" }} />
+                  <img className="product-img" src={selectedImage.src} alt={selectedImage.title} style={{ maxHeight: '40rem'}} />
                   <div className="popup-buttons">
                     {/* <CloseButton onClick={this.handleClosePopup}>Close</CloseButton> */}
-                    <div style={{ display: "flex" }}>
+                    <div style={{ display: "flex", placeContent: "center"}}>
                         <TButton onClick={this.handleClosePopup} style={{ margin: "0px 10px" }}>Close</TButton>
-                        <TButton onClick={this.handleClosePopup}>Select</TButton>
+                        <TButton onClick={this.handleClosePopup} style={{ margin: "0px 10px" }}>Select</TButton>
                     </div>
                   </div>
                 </PopupContent>
