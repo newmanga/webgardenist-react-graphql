@@ -6,6 +6,7 @@ import {MenuItems} from "./components/NavBar/MenuItems"
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import ThankYouPage from './components/Thank/Thank';
+import SurveyPage from './components/Survey/Survey';
 // import './components/NavBar/Navbar.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               )
           })}
           <Route path="/thanks" element={<ThankYouPage/>}/>
+          <Route path="/survey" element={<SurveyPage/>}/>
           
         </Routes>        
       </Router>

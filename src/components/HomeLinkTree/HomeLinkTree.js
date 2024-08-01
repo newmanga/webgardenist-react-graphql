@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {LinkList} from "./LinkList"
 import './HomeLinkTree.css'
-import styled, {css} from "styled-components/macro";
+import styled from "styled-components/macro";
 import mainLogo from './../../kingGardenistLogo.png';
 
 import {HeaderSection} from '../Common/Header';

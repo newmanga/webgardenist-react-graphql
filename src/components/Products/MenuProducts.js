@@ -9,24 +9,28 @@ export const MenuProductImgs = [
         title: 'Monstera',
         src: Monstera,
         price: "$4",
-        cName: 'product-img'
+        cName: 'product-img',
+        path: "#"
     },
     {
         title: 'Cattleya Aurear',
         src: CattleyaAurear,
         price: "$4",
-        cName: 'product-img'
+        cName: 'product-img',
+        path: "#"
     },
     {
         title: 'Sunflower',
         src: Sunflower,
         price: "$4",
-        cName: 'product-img'
+        cName: 'product-img',
+        path: "#"
     },
     {
         title: 'Autumn Leaves',
         src: AutumnLeaves,
         price: "$4",
-        cName: 'product-img'
+        cName: 'product-img',
+        path: "#"
     }
 ]

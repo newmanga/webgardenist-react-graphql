@@ -9,7 +9,7 @@ const ThankYouSection = styled.section`
 `;
 
 const TButton = styled.button`
-    width: auto;
+    width: 300px;
     margin-bottom: 5px;
     font-size: 1.5rem;
     border-style: solid;
