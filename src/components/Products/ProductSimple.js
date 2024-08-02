@@ -8,7 +8,7 @@ const ProductButton = styled.button`
     width: 100%;
     border-style: solid;
     border-width: 0px;
-    // border-radius: 50px;
+    border-radius: 5px;
     // box-shadow: 5px 5px 10px -3px #000;
     display: flex;
     align-items: center;
@@ -33,6 +33,7 @@ const PopupWrapper = styled.div`
 `;
 
 const PopupContent = styled.div`
+    display: grid;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -42,7 +43,7 @@ const PopupContent = styled.div`
     max-width: 800px; /* Limit maximum width for responsiveness */
     max-height: 95%; /* Limit maximum height for overflow prevention */
     overflow-y: auto; /* Enable scrolling if content overflows */
-    margin: 10px;
+    // margin: 10px;
 `;
 
 class ProductSimple extends Component {
@@ -87,7 +88,7 @@ class ProductSimple extends Component {
             {isPopupOpen && (
               <PopupWrapper style={{ visibility: "visible", opacity: 1 }}>
                 <PopupContent>
-                  <img className="product-img" src={selectedImage.src} alt={selectedImage.title} style={{ maxHeight: '40rem'}} />
+                  <img className="product-img2" src={selectedImage.src} alt={selectedImage.title} style={{ maxHeight: '40rem'}} />
                   <div className="popup-buttons">
                     {/* <CloseButton onClick={this.handleClosePopup}>Close</CloseButton> */}
                     <div style={{ display: "flex", placeContent: "center"}}>
