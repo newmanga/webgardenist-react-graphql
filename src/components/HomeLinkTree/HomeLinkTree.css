@@ -33,7 +33,7 @@
 .Slogan {
     z-index: 1;
     margin-top: 1rem;
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
 }
 
 .Slogan h1{
@@ -70,8 +70,8 @@
         height: 6rem;
     }
 
-    .Slogan {
+    .Slogan h1{
         font-size: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 0px;
     }
 }

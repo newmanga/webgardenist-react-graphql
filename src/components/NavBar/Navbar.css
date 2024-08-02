@@ -1,6 +1,6 @@
-.NavbarItems {
+.MainNavBar {
     background: #f6e7cb;
-    height: 130px;
+    height: var(--navbar-height);
     display: grid;
     grid-template-columns: 25% 50% 25%;
     justify-content: center;
@@ -60,7 +60,7 @@
 }
 
 @media screen and (max-width: 960px) {
-    .NavbarItems {
+    .MainNavBar {
         grid-template-rows: 10% 90%;
     }
 
@@ -95,10 +95,11 @@
     }
 
     .menu-icon {
-        grid-row-start: 1;
+        /* grid-row-start: 1; */
         grid-column-start: 3;
         margin-top: 2rem;
         margin-right: 2rem;
+        height: 100%;
         display: flex;
         justify-self: flex-end;
         font-size: 1.8rem;

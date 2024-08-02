@@ -3,3 +3,15 @@
   margin: 0 ;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: zenon, sans-serif;
+}
+
+:root {
+  --navbar-height: 80px;
+}

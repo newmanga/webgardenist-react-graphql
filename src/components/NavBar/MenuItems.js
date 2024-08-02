@@ -1,5 +1,7 @@
 import ContactPage from '../Contact/Contact';
 import HomeLinkTree from '../HomeLinkTree/HomeLinkTree';
+import ThankYouPage from '../Thank/Thank';
+import SurveyPage from '../Survey/Survey';
 
 export const MenuItems = [
     {
@@ -10,14 +12,14 @@ export const MenuItems = [
     },
     {
         title: 'Services',
-        path: '/',
-        element: <HomeLinkTree/>,
+        path: '/survey',
+        element: <SurveyPage/>,
         cName: 'nav-links'
     },
     {
         title: 'Products',
-        path: '/',
-        element: <HomeLinkTree/>,
+        path: '/thanks',
+        element: <ThankYouPage/>,
         cName: 'nav-links'
     },
     {

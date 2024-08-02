@@ -4,36 +4,19 @@ import {HeaderSection} from '../Common/Header';
 import ProductSimple from '../Products/ProductSimple';
 
 const GenericSection = styled.section`
-    padding-top: 0px;
+    padding-top: 30px;
+    margin: 0px 10px;
 `;
 
-const TButton = styled.button`
-    width: 300px;
-    margin-bottom: 5px;
-    font-size: 1.5rem;
-    border-style: solid;
-    border-width: 0px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 10px -3px #000;
-    display: inline;
-    align-items: center;
-    justify-content: left;
-    background-color: #4c956c;
-    position: relative;
-    z-index: 1;
-    padding: 0.5rem;
-    &:hover {
-        background-color: #d68c45;
-    }
+const P = styled.p`
+    font-size: 1.4rem;
 `;
 
 const SurveyPage = () => {
     return (
       <HeaderSection>
         <GenericSection>
-                <div className="thank-message">
-                  <h3>Which of below products you would like to see listed in our shop?</h3>
-                </div>
+                <P>Select the product you like the most:</P>
                 <ProductSimple/>
         </GenericSection>
       </HeaderSection>

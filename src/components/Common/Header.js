@@ -7,7 +7,7 @@ const HeaderSection = styled.section`
     background-size: contain;
     background-repeat: repeat;
     background-position: top;
-    margin-top: 130px;
+    padding-top: var(--navbar-height);
     min-height: 1000px;
 `;
 
@@ -26,6 +26,8 @@ const TButton = styled.button`
     position: relative;
     z-index: 1;
     padding: 0.5rem;
+    font-family: zenon, sans-serif;
+    color: black;
     &:hover {
         background-color: #d68c45;
     }
