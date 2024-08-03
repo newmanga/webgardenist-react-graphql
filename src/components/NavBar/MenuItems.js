@@ -11,8 +11,8 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Services',
-        path: '/survey',
+        title: 'Follow Us',
+        path: '/media',
         element: <SurveyPage/>,
         cName: 'nav-links'
     },
