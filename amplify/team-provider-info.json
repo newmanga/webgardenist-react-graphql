@@ -10,6 +10,11 @@
       "StackName": "amplify-kindgardenist-dev-5856a",
       "StackId": "arn:aws:cloudformation:us-east-2:143242857539:stack/amplify-kindgardenist-dev-5856a/05fbd510-5b31-11ef-8a82-0add8f7378c9",
       "AmplifyAppId": "d3og49qf2b61hm"
+    },
+    "categories": {
+      "function": {
+        "KGContactHandler": {}
+      }
     }
   }
 }
