@@ -21,5 +21,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_KGContactHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "KGContactHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_KGContactHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "KGContactHandler"
+        }
+      ]
+    }
   }
 }
