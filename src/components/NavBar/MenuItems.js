@@ -9,24 +9,23 @@ export const MenuItems = [
         path: '/',
         element: <HomeLinkTree/>,
         cName: 'nav-links'
-    }
-    // },
-    // {
-    //     title: 'Follow Us',
-    //     path: '/media',
-    //     element: <SurveyPage/>,
-    //     cName: 'nav-links'
-    // },
+    },
+    {
+        title: 'Follow Us',
+        path: '/media',
+        element: <SurveyPage/>,
+        cName: 'nav-links'
+    },
     // {
     //     title: 'Products',
     //     path: '/thanks',
     //     element: <ThankYouPage/>,
     //     cName: 'nav-links'
     // },
-    // {
-    //     title: 'Contact Us',
-    //     path: '/contact',
-    //     element: <ContactPage/>,
-    //     cName: 'nav-links'
-    // }
+    {
+        title: 'Contact Us',
+        path: '/contact',
+        element: <ContactPage/>,
+        cName: 'nav-links'
+    }
 ]
