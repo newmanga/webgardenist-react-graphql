@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 import {HeaderSection} from '../Common/Header';
 import {TButton} from '../Common/Header';
 import './Contact.css';
-import { post } from 'aws-amplify/api';
+// import { post } from 'aws-amplify/api';
 
 // async function updateTodo() {
 //   try {
@@ -22,6 +22,28 @@ import { post } from 'aws-amplify/api';
 //   }
 // }
 
+import { post } from 'aws-amplify/api';
+
+async function postTodo() {
+  try {
+    const restOperation = post({
+      apiName: 'KGContactForm',
+      path: '/items',
+      options: {
+        body: ""
+      }
+    });
+
+    const { body } = await restOperation.response;
+    const response = await body.json();
+
+    console.log('POST call succeeded');
+    console.log(response);
+  } catch (e) {
+    console.log('POST call failed: ', JSON.parse(e.response.body));
+  }
+}
+
 const ContactSection = styled.section`
     margin-top: 50px;
 `;
@@ -35,8 +57,8 @@ function ContactPage() {
     const handleSubmit = async (e) => {
        e.preventDefault();
        // Here you would typically handle form submission, e.g., sending data to a server
-      //  const response = await updateTodo();
-      //  console.log(response)
+       const response = await postTodo();
+       console.log(response)
 
        console.log('Form submitted:', { first_name, last_name, email, message });
      };
