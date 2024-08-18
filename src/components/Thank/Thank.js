@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {css} from "styled-components/macro";
+import styled from "styled-components/macro";
 import {HeaderSection} from '../Common/Header';
 import {TButton} from '../Common/Header';
 import './Thank.css';

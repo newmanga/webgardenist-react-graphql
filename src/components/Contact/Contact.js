@@ -1,8 +1,26 @@
 import React, { useState } from 'react';
-import styled, {css} from "styled-components/macro";
+import styled from "styled-components/macro";
 import {HeaderSection} from '../Common/Header';
 import {TButton} from '../Common/Header';
 import './Contact.css';
+import { post } from 'aws-amplify/api';
+
+// async function updateTodo() {
+//   try {
+//     const todo = { name: 'My first todo', message: 'Hello world!' };
+//     const restOperation = post({
+//       apiName: 'KGContactHandler',
+//       path: '/items',
+//       options: {
+//         // body: todo
+//       }
+//     });
+//     const response = await restOperation.response;
+//     console.log('POST call succeeded: ', response);
+//   } catch (e) {
+//     console.log('POST call failed: ', JSON.parse(e.response.body));
+//   }
+// }
 
 const ContactSection = styled.section`
     margin-top: 50px;
@@ -14,9 +32,12 @@ function ContactPage() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
        e.preventDefault();
        // Here you would typically handle form submission, e.g., sending data to a server
+      //  const response = await updateTodo();
+      //  console.log(response)
+
        console.log('Form submitted:', { first_name, last_name, email, message });
      };
 

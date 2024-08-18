@@ -17,9 +17,6 @@
           "deploymentBucketName": "amplify-kindgardenist-dev-5856a-deployment",
           "s3Key": "amplify-builds/KGContactHandler-59464d52383646316673-build.zip"
         }
-      },
-      "api": {
-        "KGContactForm": {}
       }
     }
   }
