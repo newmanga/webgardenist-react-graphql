@@ -15,8 +15,11 @@
       "function": {
         "KGContactHandler": {
           "deploymentBucketName": "amplify-kindgardenist-dev-5856a-deployment",
-          "s3Key": "amplify-builds/KGContactHandler-59464d52383646316673-build.zip"
+          "s3Key": "amplify-builds/KGContactHandler-4d484354745554706b79-build.zip"
         }
+      },
+      "api": {
+        "KGContactForm": {}
       }
     }
   }
