@@ -13,7 +13,9 @@ class Navbar extends Component {
     render() {
         return(
             <nav className="MainNavBar">
-                <img src={mainLogo} className={this.state.clicked? 'navbar-logo active' : 'navbar-logo'} />
+                <div style={{width:"100%", display:"flex", 'justify-content':"center", 'grid-column-start': "2"}}>
+                    <img src={mainLogo} className={this.state.clicked? 'navbar-logo active' : 'navbar-logo'} />
+                </div>
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>

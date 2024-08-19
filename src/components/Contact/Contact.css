@@ -1,7 +1,22 @@
 
+.header-div {
+    margin: 1rem;;
+}
+
 .header {
-    margin-left: 1rem;
     font-size: 1.5rem;
+    font-family: zenon, sans-serif;
+    font-style: italic;
+    font-size: 70px;
+    font-weight: 300;
+}
+
+.subpage {
+    max-width: 600px;
+    text-align: left;
+    padding-left: 20px;
+    border-left: 2px solid #e0bc75;
+    margin-top: 0;
 }
 
 .contact-body {
@@ -10,6 +25,9 @@
     font-size: 1.4rem;
     text-align: center;
     align-items: center;
+    background-color: #fde4c6;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .contact-element {
@@ -29,6 +47,7 @@
     max-width: 50rem;
     font-size: 1rem;
     text-align: center;
+    border-width: 0px;
 }
 
 .contact-input-message{
@@ -38,9 +57,15 @@
     height: 15rem;
     font-size: 1rem;
     text-align: center;
+    border-width: 0px;
 }
 
 @media screen and (max-width: 960px) {
+
+    .header {
+        font-size: 52px;
+    }
+
     .contact-element {
         display: flex;
         flex-direction: column;
@@ -55,6 +80,7 @@
         margin-left: 1rem;
         margin-right: 1rem;
         max-width: auto;
+        height: 2rem;
     }
 
     .contact-input-message{

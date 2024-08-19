@@ -24,7 +24,7 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
     list-style: none;
     text-align: center;
     margin-right: 1rem;
@@ -32,7 +32,7 @@
 }
 
 .nav-links {
-    color: #dda15e;
+    color: #4c956c;
     text-decoration: none;
     padding: 0.5rem 1rem;
 }
@@ -88,6 +88,7 @@
     .navbar-logo {
         grid-row-start: 2;
         grid-column-start: 2;
+        height: 2rem;
     }
 
     .navbar-logo.active {

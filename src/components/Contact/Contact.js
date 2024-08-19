@@ -26,7 +26,7 @@ async function POSTsendEmail(data) {
 }
 
 const ContactSection = styled.section`
-    margin-top: 50px;
+    margin-top: 0px;
 `;
 
 function ContactPage() {
@@ -54,16 +54,19 @@ function ContactPage() {
     return (
       <HeaderSection>
         <ContactSection>
-          <h1 className='header'>Contact Us</h1>
+          <div className='header-div'>
+            <h1 className='header'>Contact Us Today:</h1>
+            <p className='subpage'>Your satisfaction matters to us. Contact us with any custom orders.</p>
+          </div>
           <form onSubmit={handleSubmit} className='contact-body'>
             <div className='contact-element'>
-              <label htmlFor="first_name">First Name:</label>
-              <input type="text" id="first_name" autoComplete="given-name" 
+              <label htmlFor="first_name">Name:</label>
+              <input type="text" id="first_name" autoComplete="given-name" placeholder='First'
                 value={first_name} onChange={(e) => setFName(e.target.value)} className='contact-input'/>
             </div>
             <div className='contact-element'>
-              <label htmlFor="last_name">Last Name:</label>
-              <input type="text" id="last_name" autoComplete="family-name"
+              <label htmlFor="last_name"></label>
+              <input type="text" id="last_name" autoComplete="family-name" placeholder='Last'
                 value={last_name} onChange={(e) => setLName(e.target.value)} className='contact-input'/>
             </div>
             <div className='contact-element'>

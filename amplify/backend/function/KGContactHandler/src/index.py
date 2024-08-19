@@ -26,14 +26,8 @@ def SendEmail(subject, body, sender, recipient):
 
 def handler(event, context):
     print('Received event:')
-    # print(event['body'])
-
-    # t = '{"first_name": "Anthony"}'
-    # t = json.loads(t)
-    # t = json.loads(t)
 
     statusCode = 400
-
     sender = "kindgardenist@gmail.com"
     recipient = "kindgardenist@gmail.com"
 

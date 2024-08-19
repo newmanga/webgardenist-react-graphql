@@ -1,9 +1,11 @@
 import styled from "styled-components/macro";
-import headerImage from "../../Images/HeaderImageBig.jpg";
+// import headerImage from "../../Images/HeaderImageBig.jpg";
+import headerImage from "../../Images/kg_pattern.jpg";
 
 const HeaderSection = styled.section`
     position: relative;
     background-image: url(${headerImage});
+    background-size: 600px;
     background-size: contain;
     background-repeat: repeat;
     background-position: top;

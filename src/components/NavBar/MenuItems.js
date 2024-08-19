@@ -10,12 +10,12 @@ export const MenuItems = [
         element: <HomeLinkTree/>,
         cName: 'nav-links'
     },
-    {
-        title: 'Follow Us',
-        path: '/media',
-        element: <SurveyPage/>,
-        cName: 'nav-links'
-    },
+    // {
+    //     title: 'Follow Us',
+    //     path: '/media',
+    //     element: <SurveyPage/>,
+    //     cName: 'nav-links'
+    // },
     // {
     //     title: 'Products',
     //     path: '/thanks',
