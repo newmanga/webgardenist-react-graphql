@@ -1,8 +1,10 @@
 import json
 import boto3
 
-def send_email(subject, body, sender, recipient):
+def SendEmail(subject, body, sender, recipient):
+    print("Sending Email...")
     client = boto3.client('ses', region_name='us-east-2')
+
     response = client.send_email(
         Source=sender,
         Destination={
@@ -18,31 +20,40 @@ def send_email(subject, body, sender, recipient):
                 }
             }
         }
-    )
-    return response['MessageId']
+    ) 
+    print(response['ResponseMetadata'])
+    return response['ResponseMetadata']['HTTPStatusCode']
 
 def handler(event, context):
-    print('received event:')
-    print(event)
+    print('Received event:')
+    # print(event['body'])
 
-    statusCode = 200
-    email_result = {}
-    subject = "Hello from AWS Lambda"
-    body = "This is the body of the email."
+    # t = '{"first_name": "Anthony"}'
+    # t = json.loads(t)
+    # t = json.loads(t)
+
+    statusCode = 400
+
     sender = "kindgardenist@gmail.com"
     recipient = "kindgardenist@gmail.com"
 
     try:
-        email_result = send_email(subject, body, sender, recipient)
+        event_body = json.loads(event['body'])
+        print(event_body)
+        subject = f"Message from [{event_body['email']}]"
+        body = f"{event_body['message']} \n {event_body['first_name']}, {event_body['last_name']}"
+        statusCode = SendEmail(subject, body, sender, recipient)
     except:
-        statusCode = 400
-    
-    return {
+        print("Something went wrong")
+
+    return_message = {
         'statusCode': statusCode,
         'headers': {
             'Access-Control-Allow-Headers': '*',
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'
         },
-        'body': email_result
-  }
+        'body': json.dumps("Return from api")
+    }
+    
+    return return_message
