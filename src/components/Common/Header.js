@@ -30,6 +30,7 @@ const TButton = styled.button`
     padding: 0.5rem;
     font-family: zenon, sans-serif;
     color: black;
+    font-weight: 300;
     &:hover {
         background-color: #d68c45;
     }
