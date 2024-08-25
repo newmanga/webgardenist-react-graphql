@@ -40,7 +40,7 @@ const HeaderButton = styled.button`
     z-index: 1;
     padding: 0.5rem;
     &:hover {
-        background-color: #d68c45;
+        background-color: var(--main-color);
     }
 `;
 

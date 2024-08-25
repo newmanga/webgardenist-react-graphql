@@ -34,14 +34,13 @@
     grid-template-columns: repeat(2, auto);
     list-style: none;
     text-align: center;
-    margin-right: 1rem;
     font-family: zenon, sans-serif;
+    margin-bottom: 0;
 }
 
 .nav-links {
     color: #4c956c;
     text-decoration: none;
-    padding: 0.5rem 1rem;
 }
 
 .nav-links:hover {
@@ -54,7 +53,7 @@
 }
 
 .fa-bars {
-    color: #dda15e;
+    color: var(--main-color);
 }
 
 .fa-times {
@@ -82,6 +81,7 @@
         align-self: start;
         visibility: hidden;
         display: flex;
+        padding: 0;
         flex-direction: column;
         width: 100%;
         height: 0;

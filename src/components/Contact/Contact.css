@@ -15,7 +15,7 @@
     max-width: 600px;
     text-align: left;
     padding-left: 20px;
-    border-left: 2px solid #e0bc75;
+    border-left: 2px solid var(--main-color);
     margin-top: 0;
 }
 
