@@ -18,7 +18,7 @@ class Footer extends Component {
             <div className="col-md-4">
               <h5>Customer Service</h5>
               <ul>
-                <li>Contact Us</li>
+              <li><a href="/contact" style={{textDecoration: "none"}}>Contact Us</a></li>
                 <li>FAQ</li>
                 <li>Returns</li>
               </ul>
