@@ -4,6 +4,7 @@ import {HeaderSection} from '../Common/Header';
 import {TButton} from '../Common/Header';
 import './Contact.css';
 import { post } from 'aws-amplify/api';
+import { useNavigate } from 'react-router-dom'; 
 
 async function POSTsendEmail(data) {
   try {
@@ -15,13 +16,17 @@ async function POSTsendEmail(data) {
       }
     });
 
-    const { body } = await restOperation.response;
-    const response = await body.json();
+    const response = await restOperation.response;
 
-    console.log('POST call succeeded');
-    console.log(response);
+    if (response.statusCode === 200) { // Check for success status code
+      console.log('POST call succeeded');
+      return true; // Indicate successful response
+    } else {
+      throw new Error(`POST call failed with status: ${response.status}`);
+    }
   } catch (e) {
-    console.log('POST call failed: ', JSON.parse(e.response.body));
+    console.log('POST call failed: ', e);
+    return false; // Indicate failed response
   }
 }
 
@@ -34,6 +39,8 @@ function ContactPage() {
     const [last_name, setLName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+
+    const navigate = useNavigate();
     
     const handleSubmit = async (e) => {
        e.preventDefault();
@@ -45,10 +52,19 @@ function ContactPage() {
         'message': message,
       };
 
-       const response = await POSTsendEmail(data);
-       console.log(response)
+      const response = await POSTsendEmail(data);
 
-       console.log('Form submitted:', { first_name, last_name, email, message });
+      const submitButton = document.querySelector('button[type="submit"]'); // Get the submit button element
+      submitButton.disabled = true; // Set the disabled attribute to true
+
+      if (response) { // Check if response indicates success (true)
+        console.log('Form submitted:', { first_name, last_name, email, message });
+        navigate('/contact-thanks')
+      } else {
+        // Handle unsuccessful response (e.g., display error message)
+        console.log('Failed to send message.');
+        navigate('/contact-error')
+      }
      };
 
     return (

@@ -6,6 +6,8 @@ import {MenuItems} from "./components/NavBar/MenuItems"
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import ThankYouPage from './components/Thank/Thank';
+import ThankYouContactPage from './components/Thank/ThankContact';
+import ErrorContactPage from './components/Contact/Error';
 import SurveyPage from './components/Survey/Survey';
 // import './components/NavBar/Navbar.css'
 
@@ -21,6 +23,8 @@ function App() {
               )
           })}
           <Route path="/thanks" element={<ThankYouPage/>}/>
+          <Route path="/contact-thanks" element={<ThankYouContactPage/>}/>
+          <Route path="/contact-error" element={<ErrorContactPage/>}/>
           <Route path="/survey" element={<SurveyPage/>}/>
           
         </Routes>        
