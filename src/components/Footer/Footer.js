@@ -26,11 +26,11 @@ class Footer extends Component {
             <div className="col-md-4">
               <h5>Follow Us</h5>
               <ul className="social-icons">
-                <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i className="fab fa-tiktok"></i></a></li>
-                <li><a href="#"><i className="fab fa-instagram"></i></a></li>
-                <li><a href="#"><i className="fab fa-etsy"></i></a></li>
-              </ul>
+                <li><a href="https://www.etsy.com/shop/KindGardenist?ref=profile_header"><i className="fab fa-etsy"></i></a></li>
+                <li><a href="https://www.instagram.com/kindgardenist/"><i className="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.tiktok.com/@kindgardenist?lang=en"><i className="fab fa-tiktok"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100086774881220"><i className="fab fa-facebook-f"></i></a></li>
+            </ul>
             </div>
           </div>
           <div className="row copyright-info">
