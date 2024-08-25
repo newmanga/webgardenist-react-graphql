@@ -72,7 +72,7 @@ function ContactPage() {
         <ContactSection>
           <div className='header-div'>
             <h1 className='header'>Contact Us Today:</h1>
-            <p className='subpage'>Your satisfaction matters to us. Contact us with any custom orders.</p>
+            <p className='subpage'>Your satisfaction matters to us. Contact us with any custom orders or questions.</p>
           </div>
           <form onSubmit={handleSubmit} className='contact-body'>
             <div className='contact-element'>
